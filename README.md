@@ -5,7 +5,7 @@
 
 <h2>Schéma du système</h2>
 
-<img src="schema.png">
+<img src="imagesschema.png">
 
 <h2> Important </h2>
 
