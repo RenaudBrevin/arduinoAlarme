@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notifications</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    </head>
+    <body>
+        <div id="full">
+            <h2 id="titre" class="none">YA QUELQU'UN</h2>
+            <img id="voiture" src="images/animated-police-and-cop-image-0023.gif" alt="police">
+            <img id="img" class="active" src="images/logo_home_secure-removebg-preview.png" alt="logo">
+            <div id="div" class="active">
+                <div>
+                    <img src="images/home.png" alt="home">
+                </div>
+                <div>
+                    <img src="images/cadenas.png" alt="cadenas">
+                </div>
+                <div>
+                    <img src="images/profil.png" alt="profil">
+                </div>
+            </div>
+            <button id="btn" class="none">Revenir en arrière</button>
+        </div>
+
+        <script>
+            const socket = io("http://localhost:3000");
+
+            socket.on('connect', function() {
+                console.log('User connected');
+            });
+
+            const btn = document.querySelector('#btn')
+
+    socket.on('received_data', function(data) {
+        const notifAlarme = document.getElementById('titre')
+        const full = document.getElementById('full')
+        const img = document.getElementById('img')
+        const div = document.getElementById('div')
+        const voiture = document.getElementById('voiture')
+        const btn = document.getElementById('btn')
+
+            full.classList.toggle('red')
+            notifAlarme.classList.toggle('none')
+            notifAlarme.classList.toggle('active')
+            notifAlarme.classList.toggle('red')
+            voiture.classList.toggle('animvoiture')
+            btn.classList.toggle('active')
+            btn.classList.toggle('none')
+            img.classList.toggle('active')
+            img.classList.toggle('none')
+            div.classList.toggle('active')
+            div.classList.toggle('none')
+
+        console.log(data);
+    });
+
+    // btn.addEventListener(function(){
+    //     location.reload()
+    // })
+
+
+    
+
+
+        </script>
+    </body>
+</html>
