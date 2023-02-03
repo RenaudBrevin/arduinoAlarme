@@ -4,4 +4,4 @@
 
 <h2>Schéma du système</h2>
 
-<img src="schema.jpg">
+<img src="schema.png">
