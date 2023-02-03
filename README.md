@@ -6,3 +6,9 @@
 <h2>Schéma du système</h2>
 
 <img src="schema.png">
+
+<h2> Important </h2>
+
+Lien vers la vidéo de démonstration : https://youtube.com/shorts/EvS6086Ob_k?feature=share
+
+Le projet a été rendu le 3 Février à 13h, ce qui correspond à la date de rendu fixé de base. Nous avions un plus gros projet que nous avons avorté pour être dans les temps de rendu. 
